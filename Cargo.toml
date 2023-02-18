@@ -3,6 +3,13 @@ name = "ldap-matrix-sync"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+matrix-sdk = "0.6.2"
+serde = "1.0.152"
+serde_yaml = "0.9.17"
+clap = { version = "4.1.6", features = ["derive"] }
+log = "0.4.17"
+env_logger = "0.10.0"
+
+[dependencies.ldap3]
+version = "0.11.1"
