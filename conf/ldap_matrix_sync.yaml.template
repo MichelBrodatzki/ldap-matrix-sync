@@ -1,0 +1,18 @@
+---
+matrix:
+  homeserver: "matrix.example.com"
+  username: "@ldap:example.com"
+  password: "verysecretpassword"
+
+ldap:
+  connection_uri: "ldap://example.com:1337"
+  users:
+    base: "ou=Users,dc=example,dc=com"
+    objectClass: "unixPerson"
+    uid_attribute: "uid"
+  groups:
+    base: "ou=Groups,dc=example,dc=com"
+    cn_attribute: "cn"
+
+mapping:
+  - "ldap_group": "!group_channel:example.com"
